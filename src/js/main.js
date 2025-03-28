@@ -1,0 +1,3 @@
+
+
+// (Asosiy JavaScript fayli)
