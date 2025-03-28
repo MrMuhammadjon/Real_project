@@ -74,12 +74,3 @@ const products = [
 // export default products
 
 export default products;
-
-// Mahsulotlarni kategoriya bo‘yicha ajratish
-const categories = {
-    "Акции": products.filter(product => product.category === "Акции"),
-    "Новинки": products.filter(product => product.category === "Новинки"),
-    "Покупали раньше": products.filter(product => product.category === "Покупали раньше")
-};
-
-console.log(categories);
