@@ -1,0 +1,12 @@
+
+
+
+#----------- header ---------#
+
+.logo-name ---  severochka
+.head-btn  ---  Каталог
+.head-input-p ---  Найти товар
+.head-sort --- Избранное
+.head-product --- продукты
+.head-basket --- Корзина
+
