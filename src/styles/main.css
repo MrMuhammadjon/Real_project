@@ -155,13 +155,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--gap-16-px);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex: 1;
+    flex: 0.5;
 }
 
 
@@ -182,13 +183,13 @@ header {
 .head-btn {
     display: flex;
     align-items: center;
-    flex: 1;
+    flex: 0.8;
     gap: var(--gap-12-px);
 }
 
 .head-btn .head-btn__catalog {
-    padding: 8px 18px;
-    border-radius: var(--border-radius-3);
+    padding: 7px 15px;
+    border-radius: var(--border-radius-5);
     background-color: var(--secondary);
     color: var(--primary-text);
     font-size: var(--font-size-16-px);
@@ -199,6 +200,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: var(--gap-10-px);
+}
+
+.head-btn .head-btn__catalog h1 {
+    font-size: var(--font-size-19-px);
 }
 
 
@@ -219,7 +224,7 @@ header {
     flex: 1;
     border: 1px solid var(--secondary);
     padding: 8px 10px;
-    border-radius: var(--border-radius-3);
+    border-radius: var(--border-radius-5);
 }
 
 .search input{
@@ -234,19 +239,90 @@ header {
 }
 
 .search button{
-    padding: 8px 10px;
-    border-radius: var(--border-radius-3);
-    background-color: var(--secondary);
+    border-radius: var(--border-radius-5);
     color: var(--primary-text);
     font-size: var(--font-size-16-px);
     font-weight: var(--font-weight-500);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background: none;
+}
+
+.search button .bx{
+    color: var(--background-text);
+    font-size: var(--font-size-20-px);
 }
 
 .account-user {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 1;
+    gap: var(--gap-10-px);
+    flex: 0.8;
 }
+
+.sort-content, .product-content, .basket-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.sort-content .sort-count, .product-content .product-count, .basket-content .basket-count {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary);
+    color: var(--primary-text);
+    font-size: var(--font-size-12-px);
+    font-weight: var(--font-weight-500);
+    border-radius: var(--border-radius-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.sort-content .bx, .product-content .bx, .basket-content .bx {
+    font-size: var(--font-size-30-px);
+    color: var(--secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+.sort-content:hover .bx, .product-content:hover .bx, .basket-content:hover .bx{
+    color: var(--warning);
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-20-px);
+    flex: 1;
+    justify-content: flex-end;
+    position: relative;
+    padding: 2px 5px;
+    border-radius: var(--border-radius-5);
+    cursor: pointer;
+}
+
+.user-profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-5);
+    object-fit: cover;
+    border-radius: var(--border-radius-5);
+}
+
+.user-profile .user-name h1{
+    font-size: var(--font-size-18-px);
+    font-weight: var(--font-weight-400);
+}
+
+
+
+
