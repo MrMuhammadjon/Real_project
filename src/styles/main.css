@@ -136,6 +136,7 @@
     font-family: var(--Rubik-font);
 }
 
+/* header */
 
 header {
     width: 100%;
@@ -325,4 +326,23 @@ header {
 
 
 
+/* home */
+
+
+.home {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    background: url(https://media.istockphoto.com/id/1255189722/vector/falling-golden-confetti.jpg?s=612x612&w=0&k=20&c=autv6HZvQYfDtXptkM5GZyZ0ozBSg5Nndlx1cmQdtEs=);
+}
+
+.home .home-max-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-20-px);
+}
 

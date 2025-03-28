@@ -22,5 +22,15 @@
     
 }
 @media(max-width: 768px){}
-@media(max-width: 576px){}
+@media(max-width: 576px){
+    .head-btn .head-btn__catalog {
+        display: none;
+    }
+    .account-user{
+        display: none;
+    }
+    .head-btn{
+        flex: 1;
+    }
+}
 @media(max-width: 480px){}
