@@ -42,10 +42,11 @@
             </div>
             <div class="head-btn">
                 <button class="head-btn__catalog" id="catalog-btn">
-                    <i class='bx bx-menu'></i> <h1>Каталог</h1>
+                    <i class='bx bx-menu'></i>
+                    <h1>Каталог</h1>
                 </button>
                 <div class="search">
-                    <input type="search" placeholder="Найти товар"  id="search" name="search">
+                    <input type="search" placeholder="Найти товар" id="search" name="search">
                     <button id="search-btn" type="submit"><i class='bx bx-search'></i></button>
                 </div>
             </div>
@@ -56,7 +57,7 @@
                     <span class="sort-count">0</span>
                 </div>
                 <div class="product-content">
-                    <i class='bx bx-package' ></i>
+                    <i class='bx bx-package'></i>
                     <p>Корзина</p>
                     <span class="product-count">0</span>
                 </div>
@@ -77,14 +78,295 @@
         </div>
     </header>
 
+    <!-- home-section -->
 
     <div class="home">
         <div class="home-max-container">
             <div class="home-img">
                 <img src="./public/img/head/img (13).png" alt="">
             </div>
-            <div class="home-content">
+            <div class="home-content-left">
                 <h1>Доставка бесплатно от 1000 ₽</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- catalog section -->
+
+    <div class="catalog" id="catalog">
+        <div class="catalog-max-container">
+            <div class="catalog-title">
+                <h1>Акции</h1>
+                <span>
+                    Все продукты <i class='bx bx-chevron-right'></i>
+                </span>
+            </div>
+            <div class="catalog-content" id="catalog-content">
+
+                <!-- catalog content here -->
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <div class="product-head">
+                        <div class="product-img">
+                            <img src="./public/img/product.img/image.png" alt="">
+                        </div>
+                        <span>
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <div class="discount">
+                            <h1>50%</h1>
+                        </div>
+                    </div>
+                    <div class="product-main">
+                        <div class="product-price">
+                            <div class="With-map">
+                                <h1>1000 ₽</h1>
+                                <p>С картой</p>
+                            </div>
+                            <div class="Regular">
+                                <h1>2000 ₽</h1>
+                                <p>Без карты</p>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                Г/Ц Блинчики с мясом вес, Россия
+                            </p>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+                            <!-- <p>
+                                4.5 (1000 отзывов)
+                            </p> -->
+                        </div>
+                        <button class="add-product-basket__btn" id="add-product-basket">
+                            <i class='bx bx-shopping-bag'></i>
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
