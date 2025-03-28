@@ -16,7 +16,7 @@ const products = [
         price: 44.50,
         paycart: 50.50,
         discount: 50,
-        image: "blinchiki.jpg",
+        image: "./public/img/product.img/image.png",
         category: "Акции",
         rating: 4.5,
         inStock: true
@@ -27,7 +27,7 @@ const products = [
         price: 44.50,
         paycart: 50.50,
         discount: 50,
-        image: "milk.jpg",
+        image: "./public/img/product.img/image (2).png",
         category: "Акции",
         rating: 4.7,
         inStock: true
@@ -38,7 +38,7 @@ const products = [
         price: 44.50,
         paycart: 50.50,
         discount: 50,
-        image: "kolbasa.jpg",
+        image: "./public/img/product.img/image (3).png",
         category: "Акции",
         rating: 4.2,
         inStock: true
@@ -49,93 +49,68 @@ const products = [
         price: 599.99,
         paycart: null,
         discount: null,
-        image: "kolbasa2.jpg",
+        image: "./public/img/product.img/image (4).png",
         category: "Новинки",
         rating: 4.8,
         inStock: true
     },
-    {
-        id: 5,
-        name: "Молоко ПРОСТОКВАШИНО",
-        price: 49.39,
-        paycart: null,
-        discount: null,
-        image: "milk.jpg",
-        category: "Покупали раньше",
-        rating: 4.6,
-        inStock: true
-    },
-    {
-        id: 6,
-        name: "Колбаса КЗС-121В «СЕНА-ПОЛЕСЬЕ» GS12",
-        price: 159.99,
-        paycart: null,
-        discount: null,
-        image: "kolbasa3.jpg",
-        category: "Новинки",
-        rating: 4.5,
-        inStock: true
-    }
 ];
 
-
-
 let catalog = document.getElementById("catalog-content")
-console.log(catalog);
-
-let a ='salom'
-console.log(a);
-
-
-renderProducts(products)
 
 function renderProducts(products) {
-    catalog.innerHTML = ""
-    products.map((products) => {
+    catalog.innerHTML = ""; 
+
+    products.forEach(product => {
+        let discount = product.discount === null ? 0 : product.discount;
+        
+        let paycart = product.paycart === null ? product.price : product.paycart;
+
+        let discountedPrice = discount > 0 ? (paycart * (1 - discount / 100)).toFixed(2) : paycart;
+
         catalog.innerHTML += `
-                        <div class="product">
-                    <div class="product-head">
-                        <div class="product-img">
-                            <img src="${products.image}" alt="">
-                        </div>
-                        <span>
-                            <i class='bx bx-heart'></i>
-                        </span>
-                        <div class="discount">
-                            <h1>${products.discount}</h1>
-                        </div>
+            <div class="product">
+                <div class="product-head">
+                    <div class="product-img">
+                        <img src="${product.image}" alt="">
                     </div>
-                    <div class="product-main">
-                        <div class="product-price">
-                            <div class="With-map">
-                                <h1>${products.price}$</h1>
-                                <p>С картой</p>
-                            </div>
-                            <div class="Regular">
-                                <h1>${products.discount}$</h1>
-                                <p>Без карты</p>
-                            </div>
-                        </div>
-                        <div class="product-name">
-                            <p>
-                                ${products.name}
-                            </p>
-                        </div>
-                        <div class="product-rating">
-                            <span>
-                                ⭐⭐⭐⭐
-                            </span>
-                            <!-- <p>
-                                4.5 (1000 отзывов)
-                            </p> -->
-                        </div>
-                        <button class="add-product-basket__btn" id="add-product-basket">
-                            <i class='bx bx-shopping-bag'></i>
-                            В корзину
-                        </button>
+                    <span>
+                        <i class='bx bx-heart'></i>
+                    </span>
+                    <div class="discount">
+                        <h1>${discount > 0 ? `-${discount}%` : ""}</h1>
                     </div>
                 </div>
-        `
-    })
+                <div class="product-main">
+                    <div class="product-price">
+                        <div class="With-map">
+                            <h1>${discountedPrice}$</h1>
+                            <p>С картой</p>
+                        </div>
+                        <div class="Regular">
+                            <h1>${paycart}$</h1>
+                            <p>Без карты</p>
+                        </div>
+                    </div>
+                    <div class="product-name">
+                        <p>
+                            ${product.name}
+                        </p>
+                    </div>
+                    <div class="product-rating">
+                        <span>
+                            ⭐⭐⭐⭐⭐
+                        </span>
+                    </div>
+                    <button class="add-product-basket__btn" id="add-product-basket">
+                        <i class='bx bx-shopping-bag'></i>
+                        В корзину
+                    </button>
+                </div>
+            </div>
+        `;
+    });
 }
+
+renderProducts(products);
 
