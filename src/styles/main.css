@@ -632,3 +632,15 @@ header:hover {
     border: var(--primary);
     transform: translateY(-5px);
 }
+
+.open-card{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(53, 53, 53, 0.633);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+}
+

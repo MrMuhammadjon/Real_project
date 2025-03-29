@@ -114,10 +114,10 @@ const products1 = [
     },
     {
         id: 10,
-        name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+        name: "Колбаса сырокопченая МЯСНАЯ и Тоскан...",
         price: 159.99,
         paycart: null,
-        discount: null,
+        discount: 10,
         image: "./public/img/product.img/image (2).png",
         category: "Покупали раньше",
         rating: 4.8,

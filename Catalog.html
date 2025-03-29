@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/styles/category.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/product.js" defer></script>
+    <script src="src/js/auth.js" defer></script>
+    <script src="src/js/cart.js" defer></script>
 
     <!-- box icon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -20,9 +27,98 @@
 <body>
 
 
+    <header>
+        <div class="head-max-container">
+            <div class="logo">
+                <img src="./public/img/logo pnj/Group.png" alt="">
+                <h1>
+                    severochka
+                </h1>
+            </div>
+            <div class="head-btn">
+                <button class="head-btn__catalog" id="catalog-btn">
+                    <i class='bx bx-menu'></i>
+                    <h1>Каталог</h1>
+                </button>
+                <div class="search">
+                    <input type="search" placeholder="Найти товар" id="search" name="search">
+                    <button id="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </div>
+            <div class="account-user">
+                <div class="sort-content">
+                    <i class='bx bx-heart'></i>
+                    <p>Избранное</p>
+                    <span class="sort-count">0</span>
+                </div>
+                <div class="product-content">
+                    <i class='bx bx-package'></i>
+                    <p>Корзина</p>
+                    <span class="product-count">0</span>
+                </div>
+                <div class="basket-content">
+                    <i class="bx bx-shopping-bag"></i>
+                    <p>Корзина</p>
+                    <span class="basket-count">0</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-img" id="User-img">
+
+                    </div>
+                    <div class="user-name">
+                        <h1 id="User-name">Joniy</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
 
+
+
+
+    <div class="grid">
+        <div class="item"><img src="public/img/catalog.img/img.png" alt="Молоко, сыр, яйцо">
+            <div class="label">Молоко, сыр, яйцо</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (1).png" alt="Хлеб">
+            <div class="label">Хлеб</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (2).png" alt="Фрукты и овощи">
+            <div class="label">Фрукты и овощи</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (3).png" alt="Замороженные продукты">
+            <div class="label">Замороженные продукты</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (4).png" alt="Напитки">
+            <div class="label">Напитки</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (5).png" alt="Кондитерские изделия">
+            <div class="label">Кондитерские изделия</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (6).png" alt="Чай, кофе">
+            <div class="label">Чай, кофе</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (7).png" alt="Бакалея">
+            <div class="label">Бакалея</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (8).png" alt="Здоровое питание">
+            <div class="label">Здоровое питание</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (9).png" alt="Зоотовары">
+            <div class="label">Зоотовары</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (10).png" alt="Детское питание">
+            <div class="label">Детское питание</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (11).png" alt="Мясо, птица, колбаса">
+            <div class="label">Мясо, птица, колбаса</div>
+        </div>
+        <div class="item"><img src="public/img/catalog.img/img (11).png" alt="Мясо, птица, колбаса">
+            <div class="label">Непродовольственные товары</div>
+        </div>
+    </div>
 
 
     <!-- data aos script -->

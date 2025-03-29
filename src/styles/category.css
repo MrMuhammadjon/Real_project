@@ -123,3 +123,44 @@
     --gap-28-px: 28px;
     --gap-30-px: 30px;
 }
+
+
+
+.grid {
+    width: 90%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 80%;
+}
+.item {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.item img {
+    width: 100%;
+    display: block;
+}
+.label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(0deg, var(--success) 0%, rgba(255, 255, 255, 0.212) 100%);
+    transition: 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--box-shadow-2);
+}
