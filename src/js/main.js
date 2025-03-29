@@ -172,7 +172,6 @@ function renderProducts(products1, products2, products3) {
     }));
 
     updatedProducts1.map((products1) => {
-
         return (
             catalog.innerHTML += `
             <div class="product">
@@ -205,7 +204,7 @@ function renderProducts(products1, products2, products3) {
                     </div>
                     <div class="product-rating">
                         <span>
-                            ⭐⭐⭐⭐⭐
+                            ⭐[ ${products1.rating} ]
                         </span>
                     </div>
                     <button class="add-product-basket__btn" id="add-product-basket">
@@ -262,7 +261,7 @@ function renderProducts(products1, products2, products3) {
                     </div>
                     <div class="product-rating">
                         <span>
-                            ⭐⭐⭐⭐⭐
+                            ⭐[ ${products2.rating} ]
                         </span>
                     </div>
                     <button class="add-product-basket__btn" id="add-product-basket">
@@ -317,10 +316,10 @@ function renderProducts(products1, products2, products3) {
                       </div>
                       <div class="product-rating">
                           <span>
-                              ⭐⭐⭐⭐⭐
+                              ⭐[ ${products3.rating} ]
                           </span>
                       </div>
-                      <button onclick="getProduct()" class="add-product-basket__btn" id="add-product-basket">
+                      <button class="add-product-basket__btn" id="add-product-basket">
                           <i class='bx bx-shopping-bag'></i>
                           В корзину
                       </button>
@@ -331,13 +330,19 @@ function renderProducts(products1, products2, products3) {
 
 
 
-
 }
 
 renderProducts(aksiiProducts, novinkiProducts, pokupaliProducts);
 
+let getProductBtn = document.querySelectorAll(".add-product-basket__btn")
 
-function getProduct(){
-    console.log('ishladi');
-    
-}
+getProductBtn.forEach((btn) =>{
+    btn.addEventListener('click', ()=> {
+        let productName = btn.parentElement.querySelector(".product-name p").innerText
+        let productPrice = btn.parentElement.querySelector(".With-map h1").innerText
+        let productImg = btn.parentElement.parentElement.querySelector(".product-img img").src
+        let productRating = btn.parentElement.querySelector(".product-rating span").innerText
+
+        console.log(productName, productPrice, productImg, productRating)
+    })
+})
