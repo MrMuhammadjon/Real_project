@@ -34,8 +34,6 @@
 
     <!-- header -->
 
-    <button onclick="handleClick()"> me</button>
-
     <header>
         <div class="head-max-container">
             <div class="logo">
@@ -57,11 +55,11 @@
                 </div>
             </div>
             <div class="account-user">
-                <div     class="sort-content">
+                <div class="sort-content">
                     <a href="#">
                         <i class='bx bx-heart'></i>
                         <p>Избранное</p>
-                        <span class="sort-count">0</span>
+                        <span id="sort-count" class="sort-count">0</span>
                     </a>
                 </div>
                 <div class="product-content">
@@ -75,7 +73,7 @@
                     <a href="">
                         <i class="bx bx-shopping-bag"></i>
                         <p>Корзина</p>
-                        <span class="basket-count">0</span>
+                        <span class="basket-count" id="basket-count">0</span>
                     </a>
                 </div>
                 <a class="user-profile" href="">
@@ -180,7 +178,10 @@
                 <h1>Где нас найти</h1>
                 <p>Мы находимся по адресу: г. Москва, ул. Ленина, д. 1</p>
                 <div class="map-html-img">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.8088586873!2d66.97215027548897!3d39.65401605170822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d18b7c2e59337%3A0x532c8e039ecc92af!2z0J_Qu9C-0YnQsNC00YwgItCg0LXQs9C40YHRgtC-0L0nJw!5e0!3m2!1sru!2s!4v1743396673841!5m2!1sru!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.8088586873!2d66.97215027548897!3d39.65401605170822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d18b7c2e59337%3A0x532c8e039ecc92af!2z0J_Qu9C-0YnQsNC00YwgItCg0LXQs9C40YHRgtC-0L0nJw!5e0!3m2!1sru!2s!4v1743396673841!5m2!1sru!2s"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -233,9 +234,9 @@
         <div class="footer-right">
             <div class="social-icons">
                 <i class='bx bxl-instagram'></i>
-                <i class='bx bxl-facebook-square' ></i>
-                <i class='bx bxl-youtube' ></i>
-                <i class='bx bxl-tiktok' ></i>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-youtube'></i>
+                <i class='bx bxl-tiktok'></i>
             </div>
             <div class="footer-contact">📞 8 800 777 33 33</div>
             <div class="footer-design">Дизайн <strong>ZASOVSKIY</strong></div>
@@ -245,10 +246,10 @@
 
 
 
-<script>
+    <script>
 
 
-</script>
+    </script>
 
 </body>
 
