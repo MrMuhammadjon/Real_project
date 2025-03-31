@@ -786,7 +786,8 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    min-width: 300px;
+    flex: 1;
 }
 
 .article-card img {

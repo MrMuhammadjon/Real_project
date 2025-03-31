@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/styles/category.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/main.css">
+    
     <script src="src/js/main.js" defer></script>
     <script src="src/js/product.js" defer></script>
     <script src="src/js/auth.js" defer></script>
@@ -36,6 +37,12 @@
                 </h1>
             </div>
             <div class="head-btn">
+                <a href="Catalog.html">
+                    <button class="head-btn__catalog" id="catalog-btn">
+                        <i class='bx bx-menu'></i>
+                        <h1>Каталог</h1>
+                    </button>
+                </a>
                 <div class="search">
                     <input type="search" placeholder="Найти товар" id="search" name="search">
                     <button id="search-btn" type="submit"><i class='bx bx-search'></i></button>
@@ -43,28 +50,37 @@
             </div>
             <div class="account-user">
                 <div class="sort-content">
-                    <i class='bx bx-heart'></i>
-                    <p>Избранное</p>
-                    <span class="sort-count">0</span>
+                    <a href="">
+                        <i class='bx bx-heart'></i>
+                        <p>Избранное</p>
+                        <span class="sort-count">0</span>
+                    </a>
                 </div>
                 <div class="product-content">
-                    <i class='bx bx-package'></i>
-                    <p>Корзина</p>
-                    <span class="product-count">0</span>
+                    <a href="">
+                        <i class='bx bx-package'></i>
+                        <p>Корзина</p>
+                        <span class="product-count">0</span>
+                    </a>
                 </div>
                 <div class="basket-content">
-                    <i class="bx bx-shopping-bag"></i>
-                    <p>Корзина</p>
-                    <span class="basket-count">0</span>
+                    <a href="">
+                        <i class="bx bx-shopping-bag"></i>
+                        <p>Корзина</p>
+                        <span class="basket-count">0</span>
+                    </a>
                 </div>
-                <div class="user-profile">
+                <a class="user-profile" href="">
                     <div class="user-img" id="User-img">
-
+                        <img src="" alt="">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
                     </div>
                     <div class="user-name">
-                        <h1 id="User-name">Joniy</h1>
+                        <h1 id="User-name">User</h1>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </header>
