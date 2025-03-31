@@ -15,9 +15,6 @@
         display: none;
     }
 
-    .user-name h1 {
-        display: none;
-    }
 
     .head-max-containe {
         gap: var(--gap-20-px);
@@ -33,6 +30,19 @@
         grid-template-columns: repeat(auto-fit, minmax(220px, 4fr));
     }
 
+    .Special-offers-r-content h1 {
+        font-size: var(--font-size-20-px);
+        font-weight: var(--font-weight-500);
+        color: var(--primary-text);
+    }
+
+    .Special-offers-l-btn,
+    .Special-offers-r-btn {
+        width: 150px;
+        height: 40px;
+        font-size: var(--font-size-14-px);
+    }
+
 }
 
 @media(max-width: 768px) {
@@ -46,6 +56,19 @@
 
     .catalog-title {
         height: 75px;
+    }
+
+    .user-profile {
+        display: none;
+    }
+
+    .account-user {
+        justify-content: end;
+        flex: 0.6;
+    }
+
+    .Special-offers {
+        flex-direction: column;
     }
 }
 
