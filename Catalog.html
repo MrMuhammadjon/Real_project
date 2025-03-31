@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/category.css">
 
-    <script src="src/js/product.js" defer></script>
-    <script src="src/js/auth.js" defer></script>
-    <script src="src/js/cart.js" defer></script>
-    <script src="src/js/main.js" defer></script>
+    <script src="src/js/product.js" type="module" defer></script>
+    <script src="src/js/auth.js" type="module" defer></script>
+    <script src="src/js/cart.js" type="module" defer></script>
+    <script src="src/js/main.js" type="module" defer></script>
     <!-- box icon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -26,7 +26,7 @@
 
 <body>
 
-    <div class="Hide-catet">
+     <div id="Hide-catet" class="Hide-catet">
         <div class="categories">
             <div class="category-column">
                 <a href="#">Молоко, сыр, яйцо</a>
@@ -50,7 +50,7 @@
                 <a href="#">Мясо, птица, колбаса</a>
             </div>
         </div>
-    </div>
+    </div> 
 
     <header>
         <div class="head-max-container">
@@ -107,73 +107,79 @@
         </div>
     </header>
 
+    <div class="open-hide">
+        <button id="open-hide-btn" class="open-hide-btn">
+            menu <i class='bx bx-menu-alt-left'></i>    
+        </button>
+    </div>
+
 
 
 
 
 
     <div class="grid">
-        <a href="">
+        <a class="item1" href="">
             <div class="item"><img src="public/img/catalog.img/img.png" alt="Молоко, сыр, яйцо">
                 <div class="label">Молоко, сыр, яйцо</div>
             </div>
         </a>
-        <a href="">
+        <a class="item2" href="">
             <div class="item"><img src="public/img/catalog.img/img (1).png" alt="Хлеб">
                 <div class="label">Хлеб</div>
             </div>
         </a>
-        <a href="">
+        <a class="item3" href="">
             <div class="item"><img src="public/img/catalog.img/img (2).png" alt="Фрукты и овощи">
                 <div class="label">Фрукты и овощи</div>
             </div>
         </a>
-        <a href="">
+        <a class="item4" href="">
             <div class="item"><img src="public/img/catalog.img/img (3).png" alt="Замороженные продукты">
                 <div class="label">Замороженные продукты</div>
             </div>
         </a>
-        <a href="">
+        <a class="item5" href="">
             <div class="item"><img src="public/img/catalog.img/img (4).png" alt="Напитки">
                 <div class="label">Напитки</div>
             </div>
         </a>
-        <a href="">
+        <a class="item6" href="">
             <div class="item"><img src="public/img/catalog.img/img (5).png" alt="Кондитерские изделия">
                 <div class="label">Кондитерские изделия</div>
             </div>
         </a>
-        <a href="">
+        <a class="item7" href="">
             <div class="item"><img src="public/img/catalog.img/img (6).png" alt="Чай, кофе">
                 <div class="label">Чай, кофе</div>
             </div>
         </a>
-        <a href="">
+        <a class="item8" href="">
             <div class="item"><img src="public/img/catalog.img/img (7).png" alt="Бакалея">
                 <div class="label">Бакалея</div>
             </div>
         </a>
-        <a href="">
+        <a class="item9" href="">
             <div class="item"><img src="public/img/catalog.img/img (8).png" alt="Здоровое питание">
                 <div class="label">Здоровое питание</div>
             </div>
         </a>
-        <a href="">
+        <a class="item10" href="">
             <div class="item"><img src="public/img/catalog.img/img (9).png" alt="Зоотовары">
                 <div class="label">Зоотовары</div>
             </div>
         </a>
-        <a href="">
+        <a class="item11" href="">
             <div class="item"><img src="public/img/catalog.img/img (10).png" alt="Детское питание">
                 <div class="label">Детское питание</div>
             </div>
         </a>
-        <a href="">
+        <a class="item12" href="">
             <div class="item"><img src="public/img/catalog.img/img (11).png" alt="Мясо, птица, колбаса">
                 <div class="label">Мясо, птица, колбаса</div>
             </div>
         </a>
-        <a href="">
+        <a class="item13" href="">
             <div class="item"><img src="public/img/catalog.img/img (11).png" alt="Мясо, птица, колбаса">
                 <div class="label">Непродовольственные товары</div>
             </div>

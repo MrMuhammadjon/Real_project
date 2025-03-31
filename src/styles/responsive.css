@@ -102,6 +102,12 @@
     .article-card {
         width: 100%;
     }
+
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+      
 }
 
 @media(max-width: 576px) {
@@ -127,6 +133,10 @@
 
     .map-html-content h1 {
         font-size: var(--font-size-30-px);
+    }
+    .Hide-catet{
+        top: -800px;
+        background-color: red;
     }
 }
 

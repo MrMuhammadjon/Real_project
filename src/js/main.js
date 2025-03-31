@@ -203,6 +203,7 @@ let heartCount = document.getElementById("sort-count")
 let Zbasket = 0
 let Zheart = 0
 
+const GetgetLocalS = localStorage.getItem(Zbasket)
 
 
 
@@ -233,7 +234,6 @@ getProductBtn.forEach((btn) => {
             olibbolinganItem.unshift()
         }
 
-        console.log(olibbolinganItem);
     });
 })
 
@@ -247,11 +247,15 @@ getProductHeart.forEach((btn, index) => {
             heartCount.innerText = Zheart;
             chekedHart = true;
             btn.style.backgroundColor = "#70C05B"
+            localStorage.setItem('countSortProducts', Zheart)
+            console.log(GetgetLocalS);
         } else {
             Zheart--
             heartCount.innerText = Zbasket
             chekedHart = false
             btn.style.backgroundColor = "#8F8F8F"
+            localStorage.setItem('countSortProducts', Zheart)
+            console.log(GetgetLocalS);
         }
 
     })

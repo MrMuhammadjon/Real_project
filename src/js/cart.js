@@ -2,11 +2,19 @@
 
 // (Savat uchun alohida kodlar)
 
-let catalogbtn = document.getElementById('catalog-btn');
-let HideCatet = document.querySelector('.Hide-catet')
+let openHIde = document.getElementById("open-hide-btn")
+let styleHide = document.getElementById("Hide-catet")
 
-catalogbtn.addEventListener('toggle', ()=> {
-    HideCatet.style.top = '100px'
-    console.log('salom');
-    
+
+let closedOpen = false
+openHIde.addEventListener('click', () => {
+
+    if (!closedOpen) {
+        styleHide.style.opacity = '1'
+        closedOpen = true
+    } else {
+        styleHide.style.opacity = '0'
+        closedOpen = false
+    }
+
 })
