@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
 
-    <script src="./src/js/main.js" defer type="module"></script>
-    <script src="./src/js/product.js" defer type="module"></script>
-    <script src="./src/js/auth.js" defer type="module"></script>
-    <script src="./src/js/cart.js" defer type="module"></script>
+    <script src="./src/js/main.js" type="module" defer></script>
+    <script src="./src/js/product.js" type="module" defer></script>
+    <script src="./src/js/auth.js" type="module" defer></script>
+    <script src="/src/js/cart.js" defer type="module"></script>
 
     <!-- box icon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -34,6 +34,8 @@
 
     <!-- header -->
 
+    <button onclick="handleClick()"> me</button>
+
     <header>
         <div class="head-max-container">
             <div class="logo">
@@ -44,7 +46,7 @@
             </div>
             <div class="head-btn">
                 <a href="Catalog.html">
-                    <button class="head-btn__catalog" id="catalog-btn">
+                    <button class="head-btn__catalog">
                         <i class='bx bx-menu'></i>
                         <h1>Каталог</h1>
                     </button>
@@ -55,8 +57,8 @@
                 </div>
             </div>
             <div class="account-user">
-                <div class="sort-content">
-                    <a href="">
+                <div     class="sort-content">
+                    <a href="#">
                         <i class='bx bx-heart'></i>
                         <p>Избранное</p>
                         <span class="sort-count">0</span>
@@ -243,11 +245,10 @@
 
 
 
+<script>
 
-    <!-- data aos script -->
-    <script>
-        AOS.init();
-    </script>
+
+</script>
 
 </body>
 
