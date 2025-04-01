@@ -151,8 +151,9 @@
     gap: var(--gap-20-px);
     display: flex;
     flex-direction: column;
-    background-color: var(--background);
+    background-color: #FFFFFF;
     border-radius: var(--border-radius-7);
+    box-shadow: var(--box-shadow-3);
 }
 
 .cart-item{
@@ -166,6 +167,7 @@
     gap: var(--gap-10-px);
 }
 
+
 .summuray-dash{
     flex: 0.5;
 }
@@ -173,6 +175,12 @@
 .cart-item{
     display: flex;
     box-shadow: var(--box-shadow-2);
+    transition: 0.3s ease;
+}
+
+
+.cart-item:hover{
+    box-shadow: var(--box-shadow-2-4);
 }
 
 .cart-item img{
