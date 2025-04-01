@@ -181,22 +181,26 @@ header:hover {
     gap: var(--gap-16-px);
 }
 
+.logo{
+    flex: 0.3;
+}
+
 .logo a {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex: 0.5;
+    flex: 1;
 }
 
 
-.logo img {
+.logo a img {
     width: 40px;
     height: 40px;
     border: 50%;
     object-fit: cover;
 }
 
-.logo h1 {
+.logo a h1 {
     font-size: var(--font-size-20-px);
     font-weight: var(--font-weight-500);
     color: var(--background-text);
@@ -280,7 +284,7 @@ header:hover {
     display: flex;
     align-items: center;
     gap: var(--gap-20-px);
-    flex: 0.8;
+    flex: 0.5;
 }
 
 .sort-content a,

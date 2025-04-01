@@ -195,7 +195,6 @@ renderProducts(aksiiProducts, novinkiProducts, pokupaliProducts);
 
 
 let getProductBtn = document.querySelectorAll(".add-product-basket__btn");
-let getProductHeart = document.querySelectorAll(".bx-heart-1")
 let basketCount = document.getElementById("basket-count")
 let heartCount = document.getElementById("sort-count")
 
@@ -237,30 +236,47 @@ getProductBtn.forEach((btn) => {
 
 
 // LocalStorage'dan yuraklar sonini olish
-let Zheart = localStorage.getItem("countSortProducts") 
-    ? parseInt(localStorage.getItem("countSortProducts")) 
+let Zheart = localStorage.getItem("countSortProducts")
+    ? parseInt(localStorage.getItem("countSortProducts"))
     : 0;
 
-heartCount.innerText = Zheart; // Sahifa yangilanda yuraklar sonini chiqarish
+heartCount.innerText = Zheart; // Sahifa yangilanganda yuraklar sonini chiqarish
+
+// Yurakcha tugmalarini olish
+let getProductHeart = document.querySelectorAll(".bx-heart-1")
+
+
+// LocalStorage'dan oldingi holatni olish
+let heartStates = localStorage.getItem("heartStates")
+    ? JSON.parse(localStorage.getItem("heartStates"))
+    : Array(getProductHeart.length).fill(false);
 
 getProductHeart.forEach((btn, index) => {
-    let checkedHeart = false;
+    // Agar oldin bosilgan bo'lsa, rangini o'zgartirish
+    if (heartStates[index]) {
+        btn.style.backgroundColor = "#70C05B";
+    } else {
+        btn.style.backgroundColor = "#8F8F8F";
+    }
 
     btn.addEventListener("click", () => {
-        if (!checkedHeart) {
+        if (!heartStates[index]) {
             Zheart++;
-            heartCount.innerText = Zheart;
-            checkedHeart = true;
+            heartStates[index] = true;
             btn.style.backgroundColor = "#70C05B";
         } else {
             Zheart--;
-            heartCount.innerText = Zheart;
-            checkedHeart = false;
+            heartStates[index] = false;
             btn.style.backgroundColor = "#8F8F8F";
         }
 
-        // Yuraklar sonini LocalStorage'ga saqlash
+        // Yuraklar sonini yangilash
+        heartCount.innerText = Zheart;
+
+        // Ma'lumotlarni LocalStorage'ga saqlash
         localStorage.setItem("countSortProducts", Zheart);
+        localStorage.setItem("heartStates", JSON.stringify(heartStates));
+
         console.log("Yuraklar soni:", Zheart);
     });
 });
