@@ -19,14 +19,19 @@
 }
 .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    gap: var(--gap-20-px);
 }
 .footer-links a {
     text-decoration: none;
     color: black;
     font-size: 14px;
+    transition: 0.3s ease;
 }
+
+.footer-links a:hover{
+    color: var(--warning);
+}
+
 .footer-right {
     display: flex;
     align-items: center;

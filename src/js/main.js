@@ -194,20 +194,23 @@ renderProducts(aksiiProducts, novinkiProducts, pokupaliProducts);
 
 
 
-let olibbolinganItem = []
-
 let getProductBtn = document.querySelectorAll(".add-product-basket__btn");
 let getProductHeart = document.querySelectorAll(".bx-heart-1")
 let basketCount = document.getElementById("basket-count")
 let heartCount = document.getElementById("sort-count")
-let Zheart = 0;
-let Zbasket = 0;
 
-const getLocalStorage = localStorage.getItem("counterBasket");
+
+let Zbasket = localStorage.getItem("counterBasket") 
+    ? parseInt(localStorage.getItem("counterBasket")) 
+    : 0;
+
+let olibbolinganItem = localStorage.getItem("basketItems")
+    ? JSON.parse(localStorage.getItem("basketItems"))
+    : [];
+
+basketCount.innerText = Zbasket; // Sahifa yuklanganda savatchani yangilash
 
 getProductBtn.forEach((btn) => {
-    let checkedBasket = false;
-
     btn.addEventListener("click", () => {
         let productName = btn.parentElement.querySelector(".product-name p").innerHTML;
         let productPrice = btn.parentElement.querySelector(".With-map-in h1").innerHTML;
@@ -215,49 +218,50 @@ getProductBtn.forEach((btn) => {
         let productRating = btn.parentElement.querySelector(".product-rating span").innerHTML;
 
         Zbasket++;
+        basketCount.innerText = Zbasket;
         localStorage.setItem("counterBasket", Zbasket);
-        basketCount.innerText = getLocalStorage;
 
-        if (!checkedBasket) {
-            checkedBasket = true;
-            olibbolinganItem.push({
-                name: productName,
-                price: productPrice,
-                image: productImg,
-                rating: productRating,
-            });
-        } else {
-            olibbolinganItem.pop(); 
-        }
+        // Obyektni olibbolinganItem ga qo‘shish
+        olibbolinganItem.push({
+            name: productName,
+            price: productPrice,
+            image: productImg,
+            rating: productRating,
+        });
+
+        // Mahsulotlarni localStorage ga saqlash
+        localStorage.setItem("basketItems", JSON.stringify(olibbolinganItem));
     });
 });
 
 
+
+// LocalStorage'dan yuraklar sonini olish
+let Zheart = localStorage.getItem("countSortProducts") 
+    ? parseInt(localStorage.getItem("countSortProducts")) 
+    : 0;
+
+heartCount.innerText = Zheart; // Sahifa yangilanda yuraklar sonini chiqarish
+
 getProductHeart.forEach((btn, index) => {
-    let chekedHart = false
+    let checkedHeart = false;
 
-    btn.addEventListener('click', () => {
-
-        if (!chekedHart) {
+    btn.addEventListener("click", () => {
+        if (!checkedHeart) {
             Zheart++;
             heartCount.innerText = Zheart;
-            chekedHart = true;
-            btn.style.backgroundColor = "#70C05B"
-            localStorage.setItem('countSortProducts', Zheart)
-            console.log(GetgetLocalS);
+            checkedHeart = true;
+            btn.style.backgroundColor = "#70C05B";
         } else {
-            Zheart--
-            heartCount.innerText = Zbasket
-            chekedHart = false
-            btn.style.backgroundColor = "#8F8F8F"
-            localStorage.setItem('countSortProducts', Zheart)
-            console.log(GetgetLocalS);
+            Zheart--;
+            heartCount.innerText = Zheart;
+            checkedHeart = false;
+            btn.style.backgroundColor = "#8F8F8F";
         }
 
-    })
-
-})
-
-
-
+        // Yuraklar sonini LocalStorage'ga saqlash
+        localStorage.setItem("countSortProducts", Zheart);
+        console.log("Yuraklar soni:", Zheart);
+    });
+});
 

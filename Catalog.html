@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/category.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
 
     <script src="src/js/product.js" type="module" defer></script>
     <script src="src/js/auth.js" type="module" defer></script>
@@ -26,7 +27,73 @@
 
 <body>
 
-     <div id="Hide-catet" class="Hide-catet">
+    <header>
+        <div class="head-max-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./public/img/logo pnj/Group.png" alt="">
+                    <h1>
+                        severochka
+                    </h1>
+                </a>
+            </div>
+            <div class="head-btn">
+                <a href="Catalog.html">
+                    <button class="head-btn__catalog">
+                        <i class='bx bx-menu'></i>
+                        <h1>Каталог</h1>
+                    </button>
+                </a>
+                <div class="search">
+                    <input type="search" placeholder="Найти товар" id="search" name="search">
+                    <button id="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </div>
+            <div class="account-user">
+                <div class="sort-content">
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <p>Избранное</p>
+                        <span id="sort-count" class="sort-count">0</span>
+                    </a>
+                </div>
+                <div class="product-content">
+                    <a href="">
+                        <i class='bx bx-package'></i>
+                        <p>Корзина</p>
+                        <span class="product-count">0</span>
+                    </a>
+                </div>
+                <div class="basket-content">
+                    <a href="cart.html">
+                        <i class="bx bx-shopping-bag"></i>
+                        <p>Корзина</p>
+                        <span class="basket-count" id="basket-count">0</span>
+                    </a>
+                </div>
+                <a class="user-profile" href="">
+                    <div class="user-img" id="User-img">
+                        <img src="" alt="">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                    </div>
+                    <div class="user-name">
+                        <h1 id="User-name">User</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="open-hide">
+        <button id="open-hide-btn" class="open-hide-btn">
+            menu <i class='bx bx-menu-alt-left'></i>    
+        </button>
+    </div>
+
+    <div id="Hide-catet" class="Hide-catet">
         <div class="categories">
             <div class="category-column">
                 <a href="#">Молоко, сыр, яйцо</a>
@@ -51,70 +118,6 @@
             </div>
         </div>
     </div> 
-
-    <header>
-        <div class="head-max-container">
-            <div class="logo">
-                <img src="./public/img/logo pnj/Group.png" alt="">
-                <h1>
-                    severochka
-                </h1>
-            </div>
-            <div class="head-btn">
-                    <button class="head-btn__catalog" id="catalog-btn">
-                        <i class='bx bx-menu'></i>
-                        <h1>Каталог</h1>
-                    </button>
-                <div class="search">
-                    <input type="search" placeholder="Найти товар" id="search" name="search">
-                    <button id="search-btn" type="submit"><i class='bx bx-search'></i></button>
-                </div>
-            </div>
-            <div class="account-user">
-                <div class="sort-content">
-                    <a href="">
-                        <i class='bx bx-heart'></i>
-                        <p>Избранное</p>
-                        <span class="sort-count">0</span>
-                    </a>
-                </div>
-                <div class="product-content">
-                    <a href="">
-                        <i class='bx bx-package'></i>
-                        <p>Корзина</p>
-                        <span class="product-count">0</span>
-                    </a>
-                </div>
-                <div class="basket-content">
-                    <a href="">
-                        <i class="bx bx-shopping-bag"></i>
-                        <p>Корзина</p>
-                        <span class="basket-count">0</span>
-                    </a>
-                </div>
-                <a class="user-profile" href="">
-                    <div class="user-img" id="User-img">
-                        <img src="" alt="">
-                        <span class="material-symbols-outlined">
-                            account_circle
-                        </span>
-                    </div>
-                    <div class="user-name">
-                        <h1 id="User-name">User</h1>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <div class="open-hide">
-        <button id="open-hide-btn" class="open-hide-btn">
-            menu <i class='bx bx-menu-alt-left'></i>    
-        </button>
-    </div>
-
-
-
 
 
 
@@ -185,6 +188,31 @@
             </div>
         </a>
     </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="public/img/logo pnj/Group.png" alt="Северяночка">
+            <div class="footer-links">
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Статьи</a>
+                <a href="#">Политика обработки персональных данных</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="social-icons">
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-youtube'></i>
+                <i class='bx bxl-tiktok'></i>
+            </div>
+            <div class="footer-contact">📞 8 800 777 33 33</div>
+            <div class="footer-design">Дизайн <strong>ZASOVSKIY</strong></div>
+        </div>
+    </footer>
 
 
     <!-- data aos script -->

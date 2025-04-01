@@ -181,7 +181,7 @@ header:hover {
     gap: var(--gap-16-px);
 }
 
-.logo {
+.logo a {
     display: flex;
     align-items: center;
     gap: 10px;
