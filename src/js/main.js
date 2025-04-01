@@ -200,42 +200,38 @@ let getProductBtn = document.querySelectorAll(".add-product-basket__btn");
 let getProductHeart = document.querySelectorAll(".bx-heart-1")
 let basketCount = document.getElementById("basket-count")
 let heartCount = document.getElementById("sort-count")
-let Zbasket = 0
-let Zheart = 0
+let Zheart = 0;
+let Zbasket = 0;
 
-const GetgetLocalS = localStorage.getItem(Zbasket)
-
-
+const getLocalStorage = localStorage.getItem("counterBasket");
 
 getProductBtn.forEach((btn) => {
-    let chekedBasket = false
+    let checkedBasket = false;
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
         let productName = btn.parentElement.querySelector(".product-name p").innerHTML;
         let productPrice = btn.parentElement.querySelector(".With-map-in h1").innerHTML;
         let productImg = btn.parentElement.parentElement.querySelector(".product-img img").src;
-        let productRating = btn.parentElement.querySelector(".product-rating span");
+        let productRating = btn.parentElement.querySelector(".product-rating span").innerHTML;
 
-        console.log(productPrice);
-        Zbasket++
-        basketCount.innerText = Zbasket
-        localStorage.setItem("counterBasket", Zbasket)
-        
-        // Obyekt sifatida saqlash yaxshiroq
-        if(!chekedBasket){
-            chekedBasket = true
+        Zbasket++;
+        localStorage.setItem("counterBasket", Zbasket);
+        basketCount.innerText = getLocalStorage;
+
+        if (!checkedBasket) {
+            checkedBasket = true;
             olibbolinganItem.push({
                 name: productName,
                 price: productPrice,
                 image: productImg,
-                rating: productRating
+                rating: productRating,
             });
-        }else{
-            olibbolinganItem.unshift()
+        } else {
+            olibbolinganItem.pop(); 
         }
-
     });
-})
+});
+
 
 getProductHeart.forEach((btn, index) => {
     let chekedHart = false
