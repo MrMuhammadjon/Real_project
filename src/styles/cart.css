@@ -308,6 +308,24 @@
     align-items: center;
     height: 100%;
     flex: 1;
+    gap: var(--gap-10-px);
+}
+
+.tovar-proce{
+    justify-content: end;
+}
+
+.tovar-summary-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tovar-minuse-skidki{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-10-px);
 }
 
 .summuray-footer {
