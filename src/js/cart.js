@@ -1,31 +1,9 @@
-
-
-// (Savat uchun alohida kodlar)
-
-let openHIde = document.getElementById("open-hide-btn")
-let styleHide = document.getElementById("Hide-catet")
-
-
-let closedOpen = false
-openHIde.addEventListener('click', () => {
-
-    if (!closedOpen) {
-        styleHide.style.opacity = '1'
-        closedOpen = true
-    } else {
-        styleHide.style.opacity = '0'
-        closedOpen = false
-    }
-
-})
-
-
 let Zheart = localStorage.getItem("countSortProducts")
     ? parseInt(localStorage.getItem("countSortProducts"))
     : 0;
 
 
-let catalogSort = document.getElementById('sort-count-catalog')
+let catalogSort = document.getElementById('sort-count-cart')
 catalogSort.innerHTML = Zheart
 
 
@@ -34,8 +12,11 @@ let Zbasket = localStorage.getItem("counterBasket")
     : 0;
 
 
-let catalogBasket = document.getElementById('basket-count-catalog')
+let catalogBasket = document.getElementById('basket-count-cart')
 catalogBasket.innerText = Zbasket
 
 
 
+import olibbolinganItem from "./main.js";
+
+console.log(olibbolinganItem);

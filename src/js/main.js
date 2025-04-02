@@ -63,7 +63,7 @@ function renderProducts(products1, products2, products3) {
                       </div>
                       <div class="product-rating">
                           <span>
-                              ⭐[ ${products1.rating} ]
+                              ⭐${products1.rating}
                           </span>
                       </div>
                       <button class="add-product-basket__btn" id="add-product-basket">
@@ -119,7 +119,7 @@ function renderProducts(products1, products2, products3) {
                       </div>
                       <div class="product-rating">
                           <span>
-                              ⭐[ ${products2.rating} ]
+                              ⭐${products2.rating} 
                           </span>
                       </div>
                       <button class="add-product-basket__btn" id="add-product-basket">
@@ -174,8 +174,7 @@ function renderProducts(products1, products2, products3) {
                       </div>
                       <div class="product-rating">
                           <span>
-                              ⭐[ ${products3.rating} ]
-                          </span>
+                              ⭐ ${products3.rating}                           </span>
                       </div>
                       <button class="add-product-basket__btn" id="add-product-basket">
                           <i class='bx bx-shopping-bag'></i>
@@ -206,8 +205,11 @@ let Zbasket = localStorage.getItem("counterBasket")
 let olibbolinganItem = localStorage.getItem("basketItems")
     ? JSON.parse(localStorage.getItem("basketItems"))
     : [];
+    
+basketCount.innerText = Zbasket; 
 
-basketCount.innerText = Zbasket; // Sahifa yuklanganda savatchani yangilash
+export default olibbolinganItem
+
 
 getProductBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -235,18 +237,17 @@ getProductBtn.forEach((btn) => {
 
 
 
-// LocalStorage'dan yuraklar sonini olish
+
 let Zheart = localStorage.getItem("countSortProducts")
     ? parseInt(localStorage.getItem("countSortProducts"))
     : 0;
 
-heartCount.innerText = Zheart; // Sahifa yangilanganda yuraklar sonini chiqarish
+heartCount.innerText = Zheart; 
 
-// Yurakcha tugmalarini olish
+
 let getProductHeart = document.querySelectorAll(".bx-heart-1")
 
 
-// LocalStorage'dan oldingi holatni olish
 let heartStates = localStorage.getItem("heartStates")
     ? JSON.parse(localStorage.getItem("heartStates"))
     : Array(getProductHeart.length).fill(false);
