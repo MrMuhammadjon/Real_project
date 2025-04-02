@@ -227,3 +227,53 @@
     color: var(--background-color-2);
     cursor: pointer;
 }
+
+.summuray-dash{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+    flex-direction: column;
+    background-color: var(--secondary);
+    justify-content: center;
+    height: 100%;
+}
+
+
+.summuray-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #1CB9FC;
+    flex: 1;
+}
+
+
+.summuray-head h2{
+    font-size: var(--font-size-26-px);
+    font-weight: var(--font-weight-500);
+}
+
+
+.cart-summary{
+    width: 100%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16-px);
+}
+
+.tovar-summary-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.tovar-count, .tovar-proce{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+}
