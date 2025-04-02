@@ -1,10 +1,10 @@
+import products1 from "./product.js";
 
 
 // (Asosiy JavaScript fayli)
 
 
 
-import products1 from "./product.js";
 
 
 

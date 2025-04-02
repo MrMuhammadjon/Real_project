@@ -1,5 +1,5 @@
 
-import olibbolinganItem from "./main.js";
+
 
 let Zheart = localStorage.getItem("countSortProducts")
     ? parseInt(localStorage.getItem("countSortProducts"))
@@ -21,4 +21,4 @@ catalogBasket.innerText = Zbasket
 
 
 
-console.log(olibbolinganItem);
+
