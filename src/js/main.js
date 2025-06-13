@@ -198,15 +198,15 @@ let basketCount = document.getElementById("basket-count")
 let heartCount = document.getElementById("sort-count")
 
 
-let Zbasket = localStorage.getItem("counterBasket") 
-    ? parseInt(localStorage.getItem("counterBasket")) 
+let Zbasket = localStorage.getItem("counterBasket")
+    ? parseInt(localStorage.getItem("counterBasket"))
     : 0;
 
 let olibbolinganItem = localStorage.getItem("basketItems")
     ? JSON.parse(localStorage.getItem("basketItems"))
     : [];
-    
-basketCount.innerText = Zbasket; 
+
+basketCount.innerText = Zbasket;
 
 export default olibbolinganItem
 
@@ -242,7 +242,7 @@ let Zheart = localStorage.getItem("countSortProducts")
     ? parseInt(localStorage.getItem("countSortProducts"))
     : 0;
 
-heartCount.innerText = Zheart; 
+heartCount.innerText = Zheart;
 
 
 let getProductHeart = document.querySelectorAll(".bx-heart-1")
